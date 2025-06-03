@@ -1,0 +1,309 @@
+
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 2%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3vw;
+}
+.product-detail{
+    margin-left: 20%;
+
+}
+
+/* Flexbox 布局 */
+.product-list {
+    display: flex;
+    margin-left: 20%;
+    flex-wrap: wrap;  /* 允许换行 */
+    justify-content: space-around;  /* 每行的产品之间均匀分布 */
+    gap: 10px;  /* 设置产品之间的间距 */
+    padding: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 15%;  /* 每个产品的宽度 */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 为产品添加阴影 */
+    transition: transform 0.3s ease;  /* 使产品在悬停时有动画效果 */
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.product img {
+    width: 100%;  
+    height: auto;  
+    border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+    margin: 10px;
+    font-size: 1.8vw;
+
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.product button {
+  padding:10px;
+    bottom: 10px; 
+    /* background-color: #007BFF; */
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.product button:hover {
+    background-color: #007BFF;
+}
+
+/* Hover 效果 */
+.product:hover {
+    transform: scale(1.05);  /* 当悬停时，放大产品 */
+}
+.category-container {
+    position: absolute;
+    left: 0;
+    top:100px;
+    /* flex: 0 0 20%; */
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    /* background-color: #f9f9f9; */
+}
+
+.cart-icon{
+    position: absolute;
+    top:20px;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 2rem;
+}
+
+.user-icon{
+    position: absolute;
+    top:20px;
+    right: 60px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 2rem;
+}
+
+/* Cart Overlay */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;  /* Start with the cart hidden */
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999; /* Ensure the overlay is above other content */
+}
+
+/* Cart Item List */
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item input {
+    width: 50px;
+    text-align: center;
+}
+
+/* Footer with Checkout Button */
+.cart-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.cart-footer button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-footer button:hover {
+    background-color: #218838;
+}
+.sidebar {
+    width: 15%;
+    top:0;
+    padding-top: 5%; 
+    transition: padding-top 0.3s; /* 添加平滑的过渡效果 */
+    background-color: #333;
+    color: white;
+    position: fixed;
+    min-height: 100vh;
+}
+.sidebar nav ul li{
+    list-style: none;
+    list-style-type: none; 
+}
+
+.sidebar nav ul li a {
+    text-align: left;
+    text-decoration: none;
+    font-size:x-large;
+    color: white;
+    display: block;
+    font-size: 1.5vw;
+}
+
+
+.sidebar nav ul li a:hover {
+    background-color: #555;
+}
+
+
+
+.sidebar nav ul li:hover > ul {
+    display: block;  /* Show nested lists on hover */
+}
+
+.breadcrumb {
+    margin-left: 300px;
+    font-size: 16px;
+    color: #333;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    position: flex;
+    color: #007bff; /* 链接颜色 */
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* 鼠标悬停时下划线 */
+}
+
+.breadcrumb span {
+    margin: 0 5px; 
+    color: #666; 
+}
+
+.table-wrapper {
+    width: 100%;
+    margin: 10px auto;
+    background: #fff;
+    padding: 10px;	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+.table-title .add-new {
+
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+table.table {
+    table-layout: fixed;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+

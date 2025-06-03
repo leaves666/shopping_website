@@ -1,0 +1,79 @@
+
+.indexPage{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+}
+
+@media screen and (min-width:410px) {
+    .indexPage .banner {
+        float: right;
+        top:60px;
+        padding: 80px 25px 0;
+        width: 380px;
+        position: relative;
+        box-sizing: border-box;
+        background-color: white;
+
+        font-size: 28px;
+        border-radius: 10px;
+        height: 500px;
+    }
+    
+}
+
+@media screen and (max-width:410px)
+{
+    .indexPage .banner {
+        float: right;
+        top:60px;
+        padding: 50px 25px 0;
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        background-color: white;
+        font-size: 28px;
+        border-radius: 10px;
+        height: 540px;
+    }
+}
+
+.indexPage h1{
+    font-size: 28px;
+}
+.indexPage h2{
+    font-size:14px;
+    color: grey;
+}
+
+.bn {
+position: relative;
+border-radius: 20px;
+border: none;
+width: 100%;
+margin-top: 50px;
+line-height: 2;
+
+
+}
+.log_in{
+    padding: 0 10%;
+}
+.input{
+    width: 100%;
+    line-height: 2.5em;
+    margin-top: 20px;
+}
+.h_input{
+    display: none;
+    width: 100%;
+    line-height: 2.5em;
+    margin-top: 20px;
+}
+.left_link{
+    margin-top: 20px;
+    margin-left: 0px;
+    color:#007BFF;
+    font-size:1rem;
+    
+}
